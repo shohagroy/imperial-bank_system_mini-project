@@ -30,6 +30,10 @@
         height: 70vh;
       }
 
+      #diposit-button{
+          cursor: pointer;
+      }
+
       .fa-brands {
         padding: 5px;
         font-size: 20px;
@@ -68,6 +72,10 @@
           margin: auto;
         }
 
+        #withdrow-button{
+          cursor: pointer;
+        }
+
         #footer-container{
           margin-top: 140vh;
         }
@@ -83,12 +91,15 @@
         <h1 id="mainHeading" class="text-blue-600 text-5xl p-5">Imperial Banking Service</h1>
     </header>
     <main>
-      <div class="flex justify-between items-center p-5 bg-blue-100">
-        <h3>Date: 16/08/2022</h3>
+      <div class="flex justify-between items-center p-2 bg-blue-100">
+        <div>
+          <h3 >Date: <span id="day"></span>/<span id="month"></span>/<span id="year"></span></h3>
+        <h3>Time: <span id="hours">dkjf</span> : <span id="minite">dkjf</span></h3>
+        </div>
 
         <div>
           <button
-            class="bg-green-800 px-4 mx-5 py-2 rounded-lg text-bold text-white"
+            class="bg-green-800 px-4 mx-2 py-2 rounded-lg text-bold text-white"
           >
             Prient Statement
           </button>
@@ -113,7 +124,7 @@
           </div>
           <div class="text-center">
             <p class="text-5xl p-5 text-amber-500">
-              $<span class="text-green-600">110</span>
+              $<span class="text-green-600" id="depositoutput">0</span>
             </p>
           </div>
         </div>
@@ -129,7 +140,7 @@
           </div>
           <div class="text-center">
             <p class="text-5xl p-5 text-amber-500">
-              $<span class="text-red-600">110</span>
+              $<span class="text-red-600" id="withdrowOutput">0</span>
             </p>
           </div>
         </div>
@@ -145,7 +156,7 @@
           </div>
           <div class="text-center">
             <p class="text-5xl p-5 text-amber-500">
-              $<span class="text-green-400">110</span>
+              $<span class="text-green-400" id="currentOutfild">500</span>
             </p>
           </div>
         </div>
@@ -154,50 +165,33 @@
       <!-- input section  -->
 
       <div id="input-area" class="flex justify-center items-center ">
-          <form id="deposit-input" class="w-60 flex justify-center items-center flex-col bg-green-300 p-10 w-2/5 m-10">
-            <input
+
+          <div id="deposit-input" class="w-60 flex justify-center items-center flex-col bg-green-300 p-10 w-2/5 m-10">
+            <input id="deposit-fild"
               class=" w-4/5 my-2 block rounded-xl pl-5"
               type="text"
               placeholder="deposit ammount"
-            />
+            />  
             <button
-              id="login-button"
-              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
-            >
+              id="deposit-button"
+              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700">
               Deposit
-            </button>
-          </form>
+            </button> 
+          </div>
 
 
-          <form id="withdrow-input" class="w-60 flex justify-center items-center flex-col bg-green-300 p-10 w-2/5 m-10">
-            <input
-              class=" w-4/5 my-2 block rounded-xl pl-5"
+          <div id="withdrow-input" class="w-60 flex justify-center items-center flex-col bg-red-300 p-10 w-2/5 m-10">
+            <input id="withdrow-fild" class=" w-4/5 my-2 block rounded-xl pl-5"
               type="text"
-              placeholder="deposit ammount"
+              placeholder="withdraw ammount"
             />
             <button
-              id="login-button"
-              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
-            >
-              Deposit
-            </button>
-          </form>
-
-
-
-          <!-- <form class="flex justify-center items-center flex-col bg-red-300 p-10 w-2/5 m-10">
-            <input id="withdrow-input"
-              class=" w-4/5 my-2 block rounded-xl pl-5"
-              type="text"
-              placeholder="deposit ammount"
-            />
-            <button
-              id="login-button"
+              id="withdrow-button"
               class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-red-700"
             >
-              Deposit
-            </button>
-          </form> -->
+            Withdrow
+          </button>
+          </div>
 
       </div>
     </main>
