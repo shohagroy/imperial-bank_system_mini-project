@@ -30,14 +30,14 @@
         height: 70vh;
       }
 
-      .fa-brands{
+      .fa-brands {
         padding: 5px;
         font-size: 20px;
         padding-bottom: 30px;
         cursor: pointer;
         transition: all 0.3s;
       }
-      .fa-brands:hover{
+      .fa-brands:hover {
         font-size: 25px;
       }
     </style>
@@ -46,23 +46,115 @@
   </head>
   <body>
     <header class="flex justify-center items-center bg-red-100">
-        <img class="w-20" src="images/logo.png" alt="imperial logo">
-        <h1 class="text-5xl text-rose-600 p-12">
+      <img class="w-20" src="images/logo.png" alt="imperial logo" />
+      <h1 class="text-5xl text-rose-600 p-12">
         <span class="text-blue-600">Imperial Banking Service</span>
       </h1>
     </header>
     <main>
-        <div class="flex justify-between items-center p-5 bg-blue-100">
-            <h3>Date: 16/08/2022</h3>
-            <div>
-                <button class="bg-green-800 px-4 mx-5 py-2 rounded-lg text-bold text-white">Prient Statement</button>
-                <button id="logout-button" class="bg-red-700 px-4 py-2 rounded-lg text-bold text-white">Logout</button>
-            </div>
+      <div class="flex justify-between items-center p-5 bg-blue-100">
+        <h3>Date: 16/08/2022</h3>
+
+        <div>
+          <button
+            class="bg-green-800 px-4 mx-5 py-2 rounded-lg text-bold text-white"
+          >
+            Prient Statement
+          </button>
+          <button
+            id="logout-button"
+            class="bg-red-700 px-4 py-2 rounded-lg text-bold text-white"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="grid gap-4 grid-cols-3">
+        <div class="bg-green-200 my-10 mx-5 rounded-2xl">
+          <div class="flex justify-center items-center">
+            <img
+              class="w-20 rounded-lg m-5"
+              src="images/deposit_money.jpg"
+              alt=""
+            />
+            <h3 class="text-4xl px-0 text-blue-600">Deposit Money</h3>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl p-5 text-amber-500">
+              $<span class="text-green-600">110</span>
+            </p>
+          </div>
         </div>
 
-    </main>
+        <div class="bg-red-200 my-10 mx-5 rounded-2xl">
+          <div class="flex justify-center items-center">
+            <img
+              class="w-20 rounded-lg m-5"
+              src="images/widthrow_money.jpg"
+              alt=""
+            />
+            <h3 class="text-4xl px-0 text-blue-600">Withdraw Money</h3>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl p-5 text-amber-500">
+              $<span class="text-red-600">110</span>
+            </p>
+          </div>
+        </div>
 
-    
+        <div class="bg-yellow-200 my-10 mx-5 rounded-2xl">
+          <div class="flex justify-center items-center">
+            <img
+              class="w-20 rounded-lg m-5"
+              src="images/total_money.PNG"
+              alt=""
+            />
+            <h3 class="text-4xl px-0 text-blue-600">Current Money</h3>
+          </div>
+          <div class="text-center">
+            <p class="text-5xl p-5 text-amber-500">
+              $<span class="text-green-400">110</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- input section  -->
+      <div class="grid gap-4 grid-cols-2">
+        <div class="bg-green-300 p-10 w-10/12">
+          <form action="" class="text-center">
+            <input
+              class="w-full my-2 block rounded-xl pl-5"
+              type="text"
+              placeholder="deposit ammount"
+            />
+            <button
+              id="login-button"
+              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
+            >
+              Deposit
+            </button>
+          </form>
+        </div>
+
+        <div class="bg-green-300 p-10 w-10/12">
+          <form action="" class="text-center">
+            <input
+              class="w-full my-2 block rounded-xl pl-5"
+              type="text"
+              placeholder="deposit ammount"
+            />
+            <button
+              id="login-button"
+              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
+            >
+              Deposit
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <!-- <footer
       class="text-white bg-black  flex justify-center items-center flex-col"
