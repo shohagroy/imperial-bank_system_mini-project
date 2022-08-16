@@ -40,16 +40,47 @@
       .fa-brands:hover {
         font-size: 25px;
       }
+
+      @media only screen and (max-width: 786px) {
+        #mainHeading{
+          font-size: 25px;
+        }
+        #image{
+          width: 50px;
+        }
+        #main-continer{
+          display: block;
+        }
+        #deposite-container{
+          display: block;
+        }
+       
+        #input-area{
+          display: block;
+        }
+        #deposit-input{
+          width: 80%;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+        #withdrow-input{
+          width: 80%;
+          margin: auto;
+        }
+
+        #footer-container{
+          margin-top: 140vh;
+        }
+      }
+
     </style>
 
     <title>Wellcome to Imperial Banking System</title>
   </head>
   <body>
-    <header class="flex justify-center items-center bg-red-100">
-      <img class="w-20" src="images/logo.png" alt="imperial logo" />
-      <h1 class="text-5xl text-rose-600 p-12">
-        <span class="text-blue-600">Imperial Banking Service</span>
-      </h1>
+    <header class="flex justify-center items-center bg-red-100 py-2">
+      <img id="image" class="w-20" src="images/logo.png" alt="imperial logo" />
+        <h1 id="mainHeading" class="text-blue-600 text-5xl p-5">Imperial Banking Service</h1>
     </header>
     <main>
       <div class="flex justify-between items-center p-5 bg-blue-100">
@@ -70,8 +101,8 @@
         </div>
       </div>
 
-      <div class="grid gap-4 grid-cols-3">
-        <div class="bg-green-200 my-10 mx-5 rounded-2xl">
+      <div id="main-continer" class="grid gap-4 grid-cols-3">
+        <div id="deposite-container" class="bg-green-200 my-10 mx-5 rounded-2xl">
           <div class="flex justify-center items-center">
             <img
               class="w-20 rounded-lg m-5"
@@ -121,27 +152,11 @@
       </div>
 
       <!-- input section  -->
-      <div class="grid gap-4 grid-cols-2">
-        <div class="bg-green-300 p-10 w-10/12">
-          <form action="" class="text-center">
-            <input
-              class="w-full my-2 block rounded-xl pl-5"
-              type="text"
-              placeholder="deposit ammount"
-            />
-            <button
-              id="login-button"
-              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
-            >
-              Deposit
-            </button>
-          </form>
-        </div>
 
-        <div class="bg-green-300 p-10 w-10/12">
-          <form action="" class="text-center">
+      <div id="input-area" class="flex justify-center items-center ">
+          <form id="deposit-input" class="w-60 flex justify-center items-center flex-col bg-green-300 p-10 w-2/5 m-10">
             <input
-              class="w-full my-2 block rounded-xl pl-5"
+              class=" w-4/5 my-2 block rounded-xl pl-5"
               type="text"
               placeholder="deposit ammount"
             />
@@ -152,13 +167,43 @@
               Deposit
             </button>
           </form>
-        </div>
+
+
+          <form id="withdrow-input" class="w-60 flex justify-center items-center flex-col bg-green-300 p-10 w-2/5 m-10">
+            <input
+              class=" w-4/5 my-2 block rounded-xl pl-5"
+              type="text"
+              placeholder="deposit ammount"
+            />
+            <button
+              id="login-button"
+              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-green-700"
+            >
+              Deposit
+            </button>
+          </form>
+
+
+
+          <!-- <form class="flex justify-center items-center flex-col bg-red-300 p-10 w-2/5 m-10">
+            <input id="withdrow-input"
+              class=" w-4/5 my-2 block rounded-xl pl-5"
+              type="text"
+              placeholder="deposit ammount"
+            />
+            <button
+              id="login-button"
+              class="bg-blue-500 px-10 py-4 text-lg rounded-lg text-bold text-white hover:bg-red-700"
+            >
+              Deposit
+            </button>
+          </form> -->
+
       </div>
     </main>
 
-    <!-- <footer
-      class="text-white bg-black  flex justify-center items-center flex-col"
-    >
+    <footer id="footer-container"
+      class="mt-60 text-white bg-black  flex justify-center items-center flex-col">
       <p class="pt-8">@Copyright by <span>Mission SCIC (B-6) Group</span></p>
       <p>Follow Us</p>
       <div class="flex">
@@ -166,7 +211,7 @@
         <p><i class="fa-brands fa-square-instagram"></i></p>
         <p><i class="fa-brands fa-linkedin"></i></p>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="js/home.js"></script>
   </body>
